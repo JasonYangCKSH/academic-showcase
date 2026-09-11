@@ -1,6 +1,6 @@
 # Gomoku White-Side AI（五子棋白方 AI）
-- **engine_minimax.py**為黑方對手
-- **hw1_11220105.py**為白方對手
+- `engine_minimax.py`為黑方對手
+- `hw1_11220105.py`為白方對手
 
 以 Minimax + Alpha-Beta Pruning 為核心，搭配自訂啟發式評分系統實作的五子棋白方對弈程式，需於 5 秒時限內透過 stdin/stdout 與裁判程式通訊完成對弈。
 
