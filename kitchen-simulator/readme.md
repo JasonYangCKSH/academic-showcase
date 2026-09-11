@@ -1,6 +1,6 @@
 # Dual-Chef Order Scheduling Simulator (FIFO vs. SQF)
 
-以佇列（Queue）模擬餐廳點餐系統，比較**單一廚師 FIFO** 與**雙廚師 SQF(Shortest Queue First)**兩種排程策略，在訂單湧入情境下的服務效率與失敗率（逾時、爆單）表現。
+以佇列（Queue）模擬餐廳點餐系統，比較**單一廚師 FIFO** 與 **雙廚師 SQF(Shortest Queue First)** 兩種排程策略，在訂單湧入情境下的服務效率與失敗率（逾時、爆單）表現。
 
 ## 核心邏輯
 
