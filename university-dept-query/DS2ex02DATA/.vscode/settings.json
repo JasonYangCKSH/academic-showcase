@@ -1,0 +1,22 @@
+{
+    "files.associations": {
+        "iostream": "cpp",
+        "ostream": "cpp",
+        "deque": "cpp",
+        "vector": "cpp",
+        "xstring": "cpp",
+        "utility": "cpp",
+        "exception": "cpp",
+        "fstream": "cpp",
+        "ios": "cpp",
+        "istream": "cpp",
+        "memory": "cpp",
+        "queue": "cpp",
+        "sstream": "cpp",
+        "streambuf": "cpp",
+        "tuple": "cpp",
+        "xiosbase": "cpp",
+        "xutility": "cpp",
+        "algorithm": "cpp"
+    }
+}

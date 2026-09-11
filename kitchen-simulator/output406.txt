@@ -1,0 +1,8 @@
+	[Abort List]
+	OID	Delay	Abort
+	[Timeout List]
+	OID	Delay	Departure
+[Total Delay]
+0 min.
+[Failure Percentage]
+0.00 %
