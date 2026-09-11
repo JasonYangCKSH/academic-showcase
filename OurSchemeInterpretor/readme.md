@@ -23,7 +23,7 @@
 針對 Scheme 直譯器常見的錯誤情境，分層設計對應例外類別（皆繼承 `runtime_error`），並在例外訊息中附上精確的行列位置：
 
 - Scanner 層：`NoClosingQuote`（字串未閉合）
-- Parser 层：`ExpectedAtomOrLeftParen`、`ExpectedRightParen`（語法結構錯誤）
+- Parser 層：`ExpectedAtomOrLeftParen`、`ExpectedRightParen`（語法結構錯誤）
 - Evaluator 層：`UnboundSymbol`（未綁定變數）、`IncorrectNumberOfArguments`、`WithIncorrectArgumentType`、`AttemptToApplyNonFunction`、`DivisionByZero`，以及各 special form 專屬的格式錯誤（`DefineFormat`、`CondFormat`、`LambdaFormat`、`LetFormat`、`SetFormat`）
 - 執行層級控制：`LevelOfExit`、`LevelOfDefine`、`LevelOfCleanEnvironment`（限制特定指令僅能於 top-level 執行）
 
