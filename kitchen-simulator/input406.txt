@@ -1,4 +1,0 @@
-OID	Arrival	Duration	TimeOut
-401	1	2	5
-402	2	15	20
-
