@@ -5,7 +5,7 @@
 
 
 
-# Collision Folder
+# Collision資料夾
 
 大學專題（碰撞偵測方法比較）的核心研究實作，使用 C++17 撰寫。目的是在**不改變碰撞判定正確性**的前提下，比較不同 broad-phase 空間分割結構、以及 Verlet buffer（緩衝殼）機制對重建次數與整體效能的影響。研究範疇明確排除重力／N-body 敘事，粒子運動僅作為碰撞測試資料生成（邊界反彈 + 隨機初速度）。
 
@@ -116,6 +116,6 @@ cmake --build .
 
 `glm` 已以原始碼形式附帶於 `include/glm/`，不需額外安裝依賴。
 
-# System Folder
+# System資料夾
 
 基於`Collision Folder`所設計之可視化系統，對於相關的碰撞偵測進行模擬展示。
