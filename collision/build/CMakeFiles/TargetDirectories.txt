@@ -1,0 +1,4 @@
+/home/jason/collision/build/CMakeFiles/bench.dir
+/home/jason/collision/build/CMakeFiles/test_correctness.dir
+/home/jason/collision/build/CMakeFiles/edit_cache.dir
+/home/jason/collision/build/CMakeFiles/rebuild_cache.dir
