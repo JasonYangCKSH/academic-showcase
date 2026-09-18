@@ -1,6 +1,5 @@
-# System Folder
 
-基於`Collision Folder`所設計之可視化系統，對於相關的碰撞偵測進行模擬展示。
+# 碰撞偵測方法比較
 
 ![alt text](image.png)
 
@@ -116,3 +115,7 @@ cmake --build .
 ```
 
 `glm` 已以原始碼形式附帶於 `include/glm/`，不需額外安裝依賴。
+
+# System Folder
+
+基於`Collision Folder`所設計之可視化系統，對於相關的碰撞偵測進行模擬展示。
