@@ -2,6 +2,20 @@
 
 以 C++ 實作的 Scheme 語言直譯器，採用經典的 **Scanner → Parser → Evaluator** 三層架構，支援完整的 S-expression 剖析、遞迴求值與豐富的錯誤偵測機制。
 
+<center>
+
+![alt text](image.png)
+
+**圖 1**: 本interpretor可直譯宣告function，並且進行function遞迴運算
+</center>
+
+<center>
+
+![alt text](image-1.png)
+
+**圖 2**: 本interpretor可針對不同的輸入錯誤進行報錯
+</center>
+
 ## 架構設計
 
 - **Scanner**：逐字元讀取輸入，處理跳脫字元、字串邊界，將原始輸入轉換為帶有行列位置資訊（`startLine`/`startColumn`）的 Token 序列，供後續錯誤訊息精確定位。
