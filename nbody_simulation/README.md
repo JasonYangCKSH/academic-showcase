@@ -7,7 +7,7 @@
 | 資料夾 | 內容 |
 |---|---|
 | [`collision/`](#collision) | 核心演算法、benchmark 與正確性測試（C++17） |
-| [`system/`](#system) | 以 `collision/` 為基礎的可視化模擬展示系統 |
+| [`system/`](#system) | 以 `collision/` 為基礎的可視化模擬展示系統(typescript) |
 
 ---
 
