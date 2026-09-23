@@ -8,6 +8,7 @@
 - **AVL Tree**：以 `department` 為 key，插入後檢查左右子樹高度差，若失衡（差值 > 1）則依 LL/LR/RL/RR 四種情況執行單旋轉或雙旋轉（`rotateLeft`/`rotateRight`）復原平衡。
 - 每個樹節點的 key（`SchoolKey`）底下以 `vector<Data*>` 儲存所有具相同 key 值的紀錄，同一校名或科系可對應多筆資料。
 
+## 演算法流程
 <center>
 
 ![alt text](image.png)
