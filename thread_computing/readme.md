@@ -10,6 +10,12 @@
 4. **Multi-thread**：以 `<thread>` 建立 K 個 thread 各自排序，`join()` 回收後再以 thread 進行 TreeMerge（thread 共享 data section，不需 shared memory）
 
 
+
+![alt text](image-1.png)
+
+TreeMerge示意圖
+
+
 ![alt text](image.png)
 
 四種方法的執行效能比較圖(以K=20為例)
