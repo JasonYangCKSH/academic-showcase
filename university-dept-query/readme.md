@@ -8,6 +8,21 @@
 - **AVL Tree**：以 `department` 為 key，插入後檢查左右子樹高度差，若失衡（差值 > 1）則依 LL/LR/RL/RR 四種情況執行單旋轉或雙旋轉（`rotateLeft`/`rotateRight`）復原平衡。
 - 每個樹節點的 key（`SchoolKey`）底下以 `vector<Data*>` 儲存所有具相同 key 值的紀錄，同一校名或科系可對應多筆資料。
 
+<center>
+
+![alt text](image.png)
+
+**圖 1**: 2-3樹建立之流程圖
+</center>
+
+<center>
+
+![alt text](image-1.png)
+
+**圖 2**: 使用者輸入資訊工程學系，系統根據檔案從中抓取資料並輸出
+
+</center>
+
 ## 查詢功能
 
 - 輸入校名與科系名稱（皆可用 `*` 表示不限），分別在兩棵樹中定位對應節點取出候選集合
