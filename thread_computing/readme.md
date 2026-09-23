@@ -11,14 +11,21 @@
 
 
 
-![alt text](image-1.png)
+<center>
 
-TreeMerge示意圖
+![TreeMerge 示意圖](image-1.png =600x)
 
+**圖 1**　TreeMerge 示意圖
 
-![alt text](image.png)
+</center>
 
-四種方法的執行效能比較圖(以K=20為例)
+<center>
+
+![四種方法的執行效能比較圖](image.png =600x)
+
+**圖 2**　四種方法的執行效能比較（以 $K=20$ 為例）
+
+</center>
 
 
 ## 關鍵發現
