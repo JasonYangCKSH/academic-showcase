@@ -2,6 +2,9 @@
 - `engine_minimax.py`為黑方對手
 - `hw1_11220105.py`為白方對手
 
+![alt text](image.png)
+
+
 以 Minimax + Alpha-Beta Pruning 為核心，搭配自訂啟發式評分系統實作的五子棋白方對弈程式，需於 5 秒時限內透過 stdin/stdout 與裁判程式通訊完成對弈。
 
 **核心設計**：`move_priority()` 負責候選步排序以提升剪枝效率，`evaluate_board()` 負責葉節點全局評估；評分依連棋型態（五連、活四、活三...）、複合威脅（雙活四、雙活三、四三）、Position Heuristic 與 Black Forbidden Trap 逐層累加，並針對白黑雙方採不對稱權重設計。
