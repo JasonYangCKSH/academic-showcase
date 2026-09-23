@@ -9,6 +9,25 @@
 - **佇列已滿（容量 3）**：新訂單直接記入 Abort List
 - **廚師處理超過訂單的 TimeOut**：記入 Timeout List 並計算延遲時間
 - **合法完成**：正常出餐
+<center>
+
+![alt text](流程圖.png)
+
+**圖 1**: 程式流程圖
+
+</center>
+
+![alt text](image.png)
+
+**圖 2**:讀入的訂單(包含：訂單編號、抵達時間、製作時間、逾時時間)
+
+<center>
+
+![alt text](image-1.png)
+
+**圖 3**:輸出的捨棄訂單(包含終止訂單以及逾時訂單)
+
+</center>
 
 ## 兩種排程策略
 
