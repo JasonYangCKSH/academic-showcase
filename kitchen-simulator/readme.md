@@ -6,9 +6,10 @@
 
 每筆訂單具備到達時間（Arrival）、烹調時長（Duration）、逾時上限（TimeOut）。系統依序處理訂單，並依下列規則判定成功、逾時或放棄：
 
-- **佇列已滿（容量 3）**：新訂單直接記入 Abort List
 - **廚師處理超過訂單的 TimeOut**：記入 Timeout List 並計算延遲時間
+- **佇列已滿（容量 3）**：新訂單直接記入 Abort List
 - **合法完成**：正常出餐
+
 <center>
 
 ![alt text](流程圖.png)
