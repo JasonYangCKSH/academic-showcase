@@ -5,7 +5,7 @@
 ## 四種實作方法
 
 1. **Baseline**：整筆資料直接 BubbleSort，$O(N^2)$
-2. **單一 process 切片**：切成 K 份後於同一 process 內逐一 BubbleSort，再以遞迴 TreeMerge 合併，$O\left(\frac{N^2}{K} + N\log K\right)$
+2. **單一 process 切片**：切成 K 份後於同一 process 內逐一 BubbleSort，再以遞迴 TreeMerge 合併，$`O\left(\frac{N^2}{K} + N\log K\right)`$
 3. **Multi-process**：以 `mmap()` 建立 shared memory，`fork()` 產生 K 個 child process 各自排序，再以 K−1 個 process 進行 TreeMerge，並以 `waitpid()` 回收避免 zombie process
 4. **Multi-thread**：以 `<thread>` 建立 K 個 thread 各自排序，`join()` 回收後再以 thread 進行 TreeMerge（thread 共享 data section，不需 shared memory）
 
