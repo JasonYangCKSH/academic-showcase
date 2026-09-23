@@ -52,7 +52,7 @@ collision/
 
 ### Broad-phase 結構二：Octree（`broad::Octree`）
 
-- 標準 8 叉樹：`Node` 存 `center`、`halfExtent`、葉節點的 `indices`，內部節點的 `children[8]`。
+- 標準 八元樹：`Node` 存 `center`、`halfExtent`、葉節點的 `indices`，內部節點的 `children[8]`。
 - `insert()` 遞迴插入，當葉節點粒子數超過 `leafCapacity_` 且深度未達 `maxDepth_` 時呼叫 `split()` 一分為八（`maxDepth` 上限是為了避免粒子高度重疊、密集分佈時的無窮遞迴——研究過程中已知並修正過的 bug）。
 - `collectPairs()`：
   1. 每個葉節點內部粒子兩兩比對；
