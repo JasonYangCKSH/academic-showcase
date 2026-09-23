@@ -9,6 +9,12 @@
 3. **Multi-process**：以 `mmap()` 建立 shared memory，`fork()` 產生 K 個 child process 各自排序，再以 K−1 個 process 進行 TreeMerge，並以 `waitpid()` 回收避免 zombie process
 4. **Multi-thread**：以 `<thread>` 建立 K 個 thread 各自排序，`join()` 回收後再以 thread 進行 TreeMerge（thread 共享 data section，不需 shared memory）
 
+
+![alt text](image.png)
+
+四種方法的執行效能比較圖(以K=20為例)
+
+
 ## 關鍵發現
 
 - **切片數 K 越大不代表越快**：K 值夠大時，process/thread 的建立與回收開銷會反過來主導總執行時間，使實際表現偏離理論複雜度 $`O(N^2/K^2 + N\log K)`$——例如 K=5000、10000 時，方法三、四的執行時間不減反增。
