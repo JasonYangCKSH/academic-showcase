@@ -4,6 +4,7 @@ export interface ParticleData {
   id: number;
   position: Vec3;
   velocity: Vec3;
+  acceleration?: Vec3; 
   radius: number;
   positionAtLastBroadPhase: Vec3;
   skin: number;

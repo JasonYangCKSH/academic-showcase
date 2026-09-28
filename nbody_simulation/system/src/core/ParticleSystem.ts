@@ -9,11 +9,14 @@ export class ParticleSystem {
     this.particles = Array.from({ length: count }, (_, id) => {
       const position = { x: random() * bounds.x, y: random() * bounds.y, z: random() * bounds.z };
       const velocity = { x: (random() - 0.5) * 1.5, y: (random() - 0.5) * 1.5, z: (random() - 0.5) * 1.5 };
-      return { id, position, velocity, radius: PARTICLE_RADIUS, positionAtLastBroadPhase: { ...position }, skin: 0 };
+      const acceleration = { x: (random() - 0.5) * 0.5, y: (random() - 0.5) * 0.5, z: (random() - 0.5) * 0.5 };
+      return { id, position, velocity, acceleration, radius: PARTICLE_RADIUS, positionAtLastBroadPhase: { ...position }, skin: 0 };
     });
   }
   step(dt: number): void {
     this.particles.forEach((particle) => {
+      // 與 C++ Simulation::integrate 相同順序：先更新速度，再更新位置
+      if (particle.acceleration) particle.velocity = add(particle.velocity, scale(particle.acceleration, dt));
       particle.position = add(particle.position, scale(particle.velocity, dt));
       (['x', 'y', 'z'] as const).forEach((axis) => {
         if (particle.position[axis] < particle.radius) { 

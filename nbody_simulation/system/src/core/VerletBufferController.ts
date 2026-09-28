@@ -7,7 +7,14 @@ export class VerletBufferController {
   private lastTrigger = 0;
 
   constructor(RC: number, K: number, private readonly dt: number) { this.RC = RC; this.K = K; }
-  computeSkin(particle: ParticleData): number { return this.K * Math.hypot(particle.velocity.x, particle.velocity.y, particle.velocity.z) * this.dt; }
+  // 與 C++ verlet::updateLocalSkin 一致：skin = K·|v|·Δt + ½·|a|·(K·Δt)²（論文式(1)）
+  computeSkin(particle: ParticleData): number {
+    const v = Math.hypot(particle.velocity.x, particle.velocity.y, particle.velocity.z);
+    const acc = particle.acceleration ?? { x: 0, y: 0, z: 0 };
+    const a = Math.hypot(acc.x, acc.y, acc.z);
+    const horizon = this.K * this.dt;
+    return v * horizon + 0.5 * a * horizon * horizon;
+  }
   updateSkins(particles: ParticleData[], caps?: number[]): void {
     particles.forEach((particle, index) => {
       particle.skin = this.computeSkin(particle);
