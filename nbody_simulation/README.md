@@ -62,7 +62,7 @@ collision/
 ### 模擬流程（`Simulation::step()`）
 
 1. **BruteForce**：每幀 O(n²) 全配對，作為正確性基準。
-2. **UniformGrid / Octree**：第一幀或 buffer 失效時重建結構並更新 skin 與位置快照，再對候選配對做 narrow-phase。
+2. **UniformGrid / Octree**：第一幀或 skin 失效時重建結構並更新 skin 與位置快照，再對候選配對做 narrow-phase。
 3. **碰撞回應**：彈性碰撞衝量 + 依質量反比做位置修正（避免粒子黏住）、世界邊界反彈。
 4. 每幀記錄 broad／narrow／response 耗時、是否重建、候選配對數與碰撞數。
 
@@ -71,7 +71,7 @@ collision/
 ### Benchmark
 
 1. 以 BruteForce 產生每幀碰撞配對作為 ground truth。
-2. 執行無 buffer 的 `uniform_grid`、`octree` 基準（每步重建）。
+2. 執行無 skin 的 `uniform_grid`、`octree` 基準（每步重建）。
 3. 對 K ∈ {1, 2, 5, 10, 20, 50, 100, 200, 500, 1000} 執行 `uniform_grid_skin`、`octree_skin`，每組重複 10 次取平均與標準差。
 
 輸出欄位：總時間與各階段時間（平均／標準差）、`rebuild_count`、`avg_candidate_per_rebuild`、`correctness_ok`、`first_mismatch_frame`。
