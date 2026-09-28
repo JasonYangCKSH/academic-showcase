@@ -1,4 +1,4 @@
-# 異質粒子場景下 Octree 與 Verlet List 之碰撞偵測
+# N-body粒子碰撞偵測系統
 
 ![Uniform Grid 與 Octree 碰撞偵測模擬畫面](image.png)
 
