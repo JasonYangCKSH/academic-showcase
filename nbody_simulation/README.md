@@ -6,7 +6,7 @@
 
 | 資料夾 | 內容 |
 |---|---|
-| `collision/` | 核心演算法、benchmark 與正確性測試（C++17） |
+| `collision/` | 核心演算法、benchmark 與正確性測試（C++） |
 | `system/` | 互動式 3D 可視化展示（TypeScript、React、React Three Fiber） |
 
 ---
