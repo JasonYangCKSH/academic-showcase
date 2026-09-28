@@ -1,4 +1,4 @@
-# University Department Search: 2-3 Tree + AVL Tree
+# 基於2-3樹以及AVL樹之大學校系查詢系統
 
 以兩種平衡樹儲存大學校系統計資料：**2-3 Tree** 以校名為 key，**AVL Tree** 以科系名稱為 key，並支援跨樹交集查詢，例如找出「某校 × 某科系」的所有紀錄。
 
