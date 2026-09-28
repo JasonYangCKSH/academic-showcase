@@ -2,7 +2,7 @@
 
 ![Uniform Grid 與 Octree 碰撞偵測模擬畫面](image.png)
 
-大學專題：在**不改變碰撞判定正確性**的前提下，比較不同 broad-phase 空間分割結構（Uniform Grid、Octree）與 Verlet buffer 機制對重建次數及整體效能的影響。
+大學專題：在**不改變碰撞判定正確性**的前提下，比較不同 broad-phase 空間分割結構（Uniform Grid、Octree）與 Verlet list/skin 機制對重建次數及整體效能的影響。
 
 | 資料夾 | 內容 |
 |---|---|
@@ -48,7 +48,7 @@ collision/
 - 葉節點超過 `leafCapacity` 時分裂為八，並以 `maxDepth` 限制深度，避免粒子高度重疊時無窮遞迴。
 - 葉節點之間先以包圍盒（加上半徑與 skin 的 margin）快速剔除，再逐一比對粒子。
 
-**Verlet Buffer（本研究核心）**
+**Verlet list/skin（本研究核心）**
 
 每個粒子在半徑外維護一層緩衝殼 skin，只要所有粒子自上次重建以來的位移都未超過自身 skin，就沿用快取的候選配對、跳過 broad-phase 重建（對應論文 Condition 5）。
 
