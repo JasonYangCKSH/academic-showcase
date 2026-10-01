@@ -207,7 +207,7 @@ private:
     std::vector<Particle> buildScenario() const {
         return scenario::spatialCluster(
             config_.particleCount, config_.worldSize, config_.particleRadius, config_.speed,
-            config_.acc, config_.clusterFactor, config_.hotspotSpreadRatio * config_.worldSize,
+            config_.acc, config_.clusterFactor, config_.hotspotSpreadRatio ,//* config_.worldSize,
             config_.hotspotCount, config_.fastRatio, config_.fastMult, config_.scenarioSeed);
     }
 
